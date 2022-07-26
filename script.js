@@ -17,7 +17,7 @@ function writePassword() {
     return;
   }
   // For-loop to generate random length + characters
-  for (var i = 0; i < 8; i++) {
+  for (var i = 0; i < 128; i++) {
     var randomNumber = Math.floor(Math.random() * chars.length);
     password += chars.substring(randomNumber, randomNumber +1);
   }
