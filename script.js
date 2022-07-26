@@ -7,17 +7,17 @@ generateBtn.addEventListener("click", function(event) {
 });
 // Declaring var to be used to generate password
 var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()abcdefghijklmnopqrstuvwxyz';
-var passwordLength = 12;
+var passwordLength;
 var password = "";
 
 // Write password to the #password input
 function writePassword() {
-  var userChoice = window.prompt("Enter a number 1-12:")
+  var userChoice = window.prompt("Enter a number between 8-128:")
   if (!userChoice) {
     return;
   }
   // For-loop to generate random length + characters
-  for (var i = 0; i <= passwordLength; i++) {
+  for (var i = 0; i < 8; i++) {
     var randomNumber = Math.floor(Math.random() * chars.length);
     password += chars.substring(randomNumber, randomNumber +1);
   }
