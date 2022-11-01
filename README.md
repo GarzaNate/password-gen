@@ -1,6 +1,31 @@
-# THIS IS MY README FILE!
-# THERE WERE MANY CHANGES MADE IN ORDER TO MAKE THIS PROJECT WORK.
-# I PREVENTED DEFAULT FOR THE BUTTON SO I COULD TAKE OVER WHAT HAPPENS WHEN BUTTON IS PRESSED.
-# THEN I DECLARED VARIABLES FOR CHARACTERS AVAILABLE, PASSWORD LENGTH, AND THE PASSWORD ITSELF.
-# ADDED A PROMPT FOR USER TO PICK BETWEEN 8-128 CHARACTERS.
-# STILL NEED TO ADD SCREENSHOT
+
+# Password Generator
+
+## Description
+This generator is meant for any user that needs a random password using any combination of characters. Just enter how long you'd like your password to be and hit generate!
+
+## Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [License](#license)
+
+## Installation
+No installation steps! Runs in the browser @https://garzanate.github.io/password-gen/
+
+## Usage
+Open the application in your web browser, hit the generate password button, enter how many characters you would like it to be, and the password will be generated.
+
+## Tests
+No tests at this time.
+
+## Credits
+Just me!
+
+
+## License
+![Apache_2.0](https://img.shields.io/badge/LICENSE-Apache_2.0-blueviolet)
+
+## Contact
+* Email: nategarza2410@gmail.com
+* Github: GarzaNate
