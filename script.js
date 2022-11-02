@@ -6,10 +6,12 @@ generateBtn.addEventListener("click", function (event) {
   event.preventDefault()
 });
 // Declaring var to be used to generate password
-var lowercase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k' , 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's','t', 'u', 'v', 'w', 'x', 'y', 'z'];
-var uppercase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R','S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-var unique = ['!', '@', '#', '$', '%', '^', '&', '*', '()'];
+var charOptions = {
+  lowercase: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k' , 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's','t', 'u', 'v', 'w', 'x', 'y', 'z'],
+  uppercase: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R','S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
+  numbers: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
+  unique: ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')']
+}
 
 // Write password to the #password input
 
@@ -34,34 +36,34 @@ var writePassword = function () {
   userPrompts();
 
   if (lower && upper && num && special) {
-    selection = charSetSelection.lowercase.concat(charSetSelection.uppercase, charSetSelection.numbers, charSetSelection.unique);
+    selection = charOptions.lowercase.concat(charOptions.uppercase, charOptions.numbers, charOptions.unique);
     // three criteria selection
   } else if (lower && upper && num) {
-    selection = charSetSelection.lowercase.concat(charSetSelection.uppercase, charSetSelection.numbers);
+    selection = charOptions.lowercase.concat(charOptions.uppercase, charOptions.numbers);
   } else if (lower && upper && special) {
-    selection = charSetSelection.lowercase.concat(charSetSelection.uppercase, charSetSelection.unique);
+    selection = charOptions.lowercase.concat(charOptions.uppercase, charOptions.unique);
   } else if (upper && num && special) {
-    selection = charSetSelection.uppercase.concat(charSetSelection.numbers, charSetSelection.unique);
+    selection = charOptions.uppercase.concat(charOptions.numbers, charOptions.unique);
     // two criteria selection 
   } else if (lower && upper) {
-    selection = charSetSelection.lowercase.concat(charSetSelection.uppercase);
+    selection = charOptions.lowercase.concat(charOptions.uppercase);
   } else if (lower && num) {
-    selection = charSetSelection.lowercase.concat(charSetSelection.numbers);
+    selection = charOptions.lowercase.concat(charOptions.numbers);
   } else if (lower && special) {
-    selection = charSetSelection.lowercase.concat(charSetSelection.unique);
+    selection = charOptions.lowercase.concat(charOptions.unique);
   } else if (upper && num) {
-    selection = charSetSelection.uppercase.concat(charSetSelection.numbers);
+    selection = charOptions.uppercase.concat(charOptions.numbers);
   } else if (upper && special) {
-    selection = charSetSelection.uppercase.concat(charSetSelection.unique);
+    selection = charOptions.uppercase.concat(charOptions.unique);
   } else if (num && special) {
-    selection = charSetSelection.numbers.concat(charSetSelection.unique);
+    selection = charOptions.numbers.concat(charOptions.unique);
     // one criteria selection
   } else if (upper) {
-    selection = charSetSelection.uppercase;
+    selection = charOptions.uppercase;
   } else if (num) {
-    selection = charSetSelection.numbers;
+    selection = charOptions.numbers;
   } else if (special) {
-    selection = charSetSelection.unique;
+    selection = charOptions.unique;
   };
 
   randomPassword = [];
