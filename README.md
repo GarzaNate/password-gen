@@ -1,6 +1,8 @@
 
 # Password Generator
 
+![Screen Shot 2022-12-21 at 12 34 49 AM](https://user-images.githubusercontent.com/97882512/208858055-2e1e1866-c0f3-442d-a290-aba89c3969d8.png)
+
 ## Description
 This generator is meant for any user that needs a random password using any combination of characters. Just enter how long you'd like your password to be and hit generate!
 
